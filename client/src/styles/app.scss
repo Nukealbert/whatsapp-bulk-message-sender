@@ -1,0 +1,69 @@
+@import 'color';
+
+*{
+    padding: 0%;
+    margin: 0%;
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    box-sizing: border-box;
+
+}
+body {
+    background-color: $primary;
+    
+}
+
+.App{
+    width: 100%;
+    height: 100vh;
+    color: $tertiary;
+    padding: 3rem;
+    text-align: center;
+    
+    >h1{
+        margin-bottom: 3rem;
+        text-align: center;
+    }
+    
+    >form{
+        text-align: center;
+        margin-top: 4rem;
+        
+        >svg{
+            color: $secondary;
+           
+        }
+        >input{
+            margin-bottom: 4rem;
+            &::file-selector-button{
+                border: none;
+                width:calc(100% + 36px);
+                height:4vh;
+                margin-left:-18px;
+                color:$secondarydark;
+                background-color:white;
+                cursor:pointer
+            }
+        }
+        >textarea{
+            width: 50%;
+            height: 10vh;
+            background-color: rgba($color: #ffff, $alpha: 0.9);
+            padding: 1rem;
+           &:focus{
+            border-color:$primary;
+           }
+        }
+        >button{
+            margin-top: 3vh;
+            padding: 6px;
+            color: $secondarydark;
+            &:hover{
+                background-color: $primary;
+                color: $tertiary;
+            }
+        }
+        
+    }
+    
+}
